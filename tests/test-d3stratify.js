@@ -7,7 +7,7 @@ const links = d3.csv("datatest4.csv", (d) => {
       parent: d.parent,
       lien: d.lien,
       type: d.type,
-      note: d.note
+      description: d.description
     };
   });
   console.log(links);
