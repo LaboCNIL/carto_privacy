@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="https://linc.cnil.fr">
+                <img class="header_back_button" src="https://linc.cnil.fr/obs-cookies/static/back.svg" alt="flèche vers la gauche dans un cercle blanc">
+                <img class="header_link" src="https://linc.cnil.fr/sites/default/files/styles/default/public/thumbnails/image/linc_lab_blanc-site-web-2.png?itok=fgENwmXw" alt="Logo du LINC avec écrit Laboratoire d'innovation numérique de la CNIL">
+            </a>
+        </nav>
+    </header>
     <main>
-        <h1>Cartographie</h1>
-        <h3>Explication</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum impedit, quod exercitationem dolore veniam, vitae aperiam quam dolores excepturi facere nostrum nam nihil, dicta beatae. Temporibus necessitatibus dolor debitis ullam, nesciunt aut blanditiis, mollitia similique ipsum dignissimos libero sunt dicta laborum facere nemo velit! Esse distinctio illo cumque impedit facilis!</p>
-        <div id="tree-container" style="border: 1.5px solid; border-color: red; border-radius: 10px; height: 90vh"></div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo tempora soluta, odio fugit facere nam molestiae vitae vel, consequatur repudiandae expedita aliquam vero ipsam placeat animi. Alias sint excepturi blanditiis, fugiat tempore quae corporis, voluptates quo inventore sunt nihil. Nobis atque officiis, quod sunt numquam in temporibus aspernatur. Eligendi facere officiis velit dolores quos, voluptatibus illo repudiandae error ab! Exercitationem possimus eveniet necessitatibus temporibus quos dicta labore mollitia molestias! Voluptatem eligendi cum modi fugiat facere officia necessitatibus ad impedit molestiae!</p>
+        <h1>Carto Privacy v2.0</h1>
+        <div class="wrap_container">
+            <div class="two_columns">
+                <h2>Le projet</h2>
+                <p>Ce projet est Lorem ipsum dolor sit amet <a href="#">lien vers rien du tout</a> adipisicing elit. Odit iusto at non reiciendis quidem veniam omnis ratione, ab provident voluptas. Et dicta, possimus quasi similique excepturi quas veniam sapiente cumque dolorum odit dolore natus totam officia eveniet debitis fuga esse! Quis, qui dignissimos itaque libero accusantium quisquam, eum eos ad veniam blanditiis expedita, voluptates ab nulla consequuntur? Fugit minus quidem fuga atque itaque, est, provident repellendus enim eum fugiat cumque nisi nihil? A numquam, rem eaque at quod delectus accusantium molestias repellat quidem suscipit ad doloribus earum officiis? Reiciendis, adipisci soluta esse quo fugit alias accusamus temporibus perferendis enim quibusdam.</p>
+            </div>
+            <div class="two_columns">
+                <h2>Mode d'emploi</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ex temporibus obcaecati at itaque libero illum incidunt hic voluptatum natus tenetur laudantium deserunt amet sit, ipsa sapiente cupiditate autem quisquam aperiam neque modi voluptate fuga soluta porro? Quam magnam voluptate totam assumenda sit reiciendis, earum quae voluptatibus ad sint aliquam.</p>
+                <aside>
+                    ⚠️ Nous nous basons sur des éléments anoncés par chacun des porteurs de services, la référence de ces services ne vaut ni recommendation, ni labellisation de la CNIL
+                </aside>
+            </div>
+        </div>
+
         <script src="echarts.js"></script>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
-        <script type="text/javascript" src="tree.js"></script>
+        <script type="text/javascript" src="tests/test-d3stratify.js"></script>
     </main>
 </body>
 </html>
