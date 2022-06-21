@@ -12,6 +12,8 @@
     - [Modifier la base de donnée](#modifier-la-base-de-donnée)
     - [Participer à la discussion](#participer-à-la-discussion)
 - [Contenu du dossier](#contenu-du-dossier)
+- [Licence](#Licence)
+- [Auteurs et autrices](#auteurs-et-autrices)
 - [Sources ?](#sources)
 
 
@@ -64,6 +66,17 @@ Fichiers
 - [LICENSE](LICENSE) la license GPLv3 du projet.
 - [.gitignore](.gitignore) permet de spécifier les fichiers ignorés par git.
 
+## License
+
+Le projet est sous license.............
+
+## Auteurs et autrices
+
+Agents et agentes de la CNIL pendant l'Open LINC
+.......................................
+
 ## Sources ?
+
+.......................................
 
 [Retour en haut](#carto-privacy-v20-by-linc)
