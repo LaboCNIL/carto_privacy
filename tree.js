@@ -15,13 +15,13 @@ const data = {
         {
           name: 'Choisir son smartphone',
           children: [
-            { name: 'Fairphone', value: 721 },
+            { name: 'Fairphone', value: "hello" },
             { name: 'Pixel Phone', value: 4294 }
           ]
         },
         {
           name: 'Choisir son ordinateur',
-          value: 3322
+          value: 91830870
         },
         {
           name: 'Recharger son smartphone',
@@ -391,7 +391,7 @@ option = {
       },
       emphasis: {
         // blurScope: 'series',
-        focus: 'ancestor',
+        focus: 'ancestor', //Focus on all ancestor nodes. 
         label: {
             color: '#682ed2',
             fontWeight: 'bold'
@@ -400,10 +400,12 @@ option = {
             color: '#682ed2'
         },
         itemStyle: {
+            color: '#682ed2',
             borderColor: '#682ed2'
         },
       },
-      blur: { //available when emphasis.focus is set
+      blur: { //available when emphasis.focus is set. détermine l'apparence des éléments non touchés par le focus
+
         label: {
             opacity: 0.4
         },
@@ -413,6 +415,15 @@ option = {
         itemStyle: {
             opacity: 0.4,
         },
+      },
+      tooltip: {
+        position: [10, 10],
+        textStyle: {
+          width: 100, //marche pas
+          height: 700, //marche pas non plus
+          overflow: 'break', //ne marche que si width est utilisée
+        },
+        formatter: 'Series name: {a} <br/> Data name: {b} <br/> Data value (if any):{c}'
       },
       expandAndCollapse: true,
       animationDuration: 550,
