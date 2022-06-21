@@ -51,6 +51,13 @@ header {
 .wrap_container {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#tree_container {
+    height: 85vh;
+    border: solid #b9b9b9 1px;
+    border-radius: 5px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -58,6 +65,10 @@ header {
         min-width: 300px;
         width: 50%;
         padding: 1em;
+    }
+
+    #tree_container {
+        margin: 1em;
     }
 }
 

@@ -1,4 +1,4 @@
-var chartDom = document.getElementById('tree-container');
+var chartDom = document.getElementById('tree_container');
 var myChart = echarts.init(chartDom, null, {
     //height: 1000
   });

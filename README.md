@@ -18,7 +18,7 @@
 ## La cartographie
 Le LINC a choisi de symboliser des usages par des verbes, découpés en actions et des sous-actions. Pour chacune des sous-actions, le LINC a repéré certaines caractéristiques et fonctionnalités spécifiques, protectrices de la vie privée (décrites dans les bulles infos). A titre d'exemple, la cartographie recense des services qui annoncent mettre en œuvre une ou plusieurs des caractéristiques présentées. Chacun de ces services est présenté par un court texte de description, tiré selon les cas du site du service ou de sa fiche Wikipedia.
 
-⚠️ Les services cités ne font l'objet d'aucune labellisation par la CNIL, ils reflètent au mieux un état des lieux transitoire des propositions repérées par le LINC.
+> ⚠️ La cartographie n'est pas exhaustive et les services cités ne font l'objet d'aucune labellisation par la CNIL, ils reflètent, au mieux, un état des lieux transitoire des propositions repérées par le LINC.
 
 ## Développement
 
