@@ -15,16 +15,19 @@ Voici une image montrant à quoi pourra ressembler la cartographie. Le design n'
 - ~~[Mon test (sans succès) avec "Stratify"](tests/test-d3stratify.js)~~
 - ~~[Papaparse](https://www.papaparse.com/)~~
 
-## Faire réapparaitre la carto
-Depuis que j'ai touché au css de [main.css](main.css), la carto ne s'affiche plus. Peut-être une histoire de `canvas` ou de taille de la div contenant la carto ?
-
-## Inclure le code pour parser dans tree.js
+## Inclure dans tree.js le code pour parser
 J'ai essayé mais je n'ai pas réussi à inclure le code de [tests/csv-parse.js](tests/csv-parse.js) dans le fichier tree.js. J'ai créé un fichier de test pour ça : [tests/tree-test.js](tests/tree-test.js).
 
 ### Changer les infos affichées dans le tooltip
 Les infos affichées dans le tooltip dependent de chaque type de graphique proposé par echarts. Pour les graphiques en arbre il affiche le chemin ainsi que qu'une valeur "value" (qui est dans les données de l'exemple). Moi j'aimerais pouvoir afficher différentes informations, comme montré dans [l'image plus haut](#rendu-visuel). Toutes les infos necessaires sont bien dans le JSON obtenu depuis le csv.
 - [Documentation tree -> tooltip](https://echarts.apache.org/en/option.html#series-tree.tooltip)
 - [Formatting of Values in Tooltip](https://echarts.apache.org/handbook/en/basics/release-note/5-3-0/#formatting-of-values-in-tooltip)
+- [Tooltip data formatter](https://echarts.apache.org/en/option.html#series-tree.data.tooltip.formatter) a l'air de donner une explication de comment importer d'autres infos dans le tooltip
 
 ## Localisation de la librairie Echarts
-Actuellement la librairie Echarts se trouve dans le fichier Echarts.js, alors que d3 est appelée via un lien ? Qu'est ce qui est le mieux dans ce genre de projet qu'on ordonne tout ça ?
+Actuellement la librairie Echarts se trouve dans le fichier Echarts.js, alors que d3 est appelée via un lien. Qu'est ce qui est le mieux dans ce genre de projet qu'on ordonne tout ça ?
+
+## Surligner le chemin
+Actuellement quand on survole une node, ses descendants sont mis en avant par la baisse d'opacité du reste de la carto. Seulement seul le chemin menant de la node à son parent est surligné de couleur violette. Il serait bien que tout le chemin et les nodes ancètres passent en violet comme sur [cette image](#rendu-visuel).
+- [Fonctionnement de l'état focus](https://echarts.apache.org/en/option.html#series-tree.emphasis.focus)
+- [Fonctionnement du blur](https://echarts.apache.org/en/option.html#series-tree.blur)
