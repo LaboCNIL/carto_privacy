@@ -1,27 +1,39 @@
-var chartDom = document.getElementById('tree-container');
+var chartDom = document.getElementById('tree_container');
 var myChart = echarts.init(chartDom, null, {
-    //height: 1000
-  });
-    window.onresize = function() {
-        myChart.resize();
-    };
+  //height: 1000
+});
+window.onresize = function () {
+  myChart.resize();
+};
 var option;
+
+function setName(hierach) {
+  hierach.name = hierach.data.id;
+  hierach.data.children = undefined;
+  hierach.data.parent = undefined;
+  hierach.parent = undefined;
+  if (hierach.children && hierach.children.length > 0) {
+    hierach.children.forEach(x => setName(x));
+  }
+}
 
 //code permettant de parser le csv
 d3.csv("data.csv").then(links => {
 
   const root = d3.stratify()
-  .id(d => 
-    d.nom
-  )
-  .parentId(d => 
-    d.parent
-  )(links);
+    .id(d =>
+      d.nom
+    )
+    .parentId(d =>
+      d.parent
+    )(links);
   //.id(d => d.nom)
   //.parentId(d => d.parent);
   console.log(root);
-  
+
   const hierarchie = d3.hierarchy(root);
+  //console.log(hierarchie);
+  setName(hierarchie);
   console.log(hierarchie);
 
   const data = hierarchie;
@@ -64,7 +76,7 @@ d3.csv("data.csv").then(links => {
           align: 'right',
           fontSize: 14,
           //emphasis: {
-            //  color: 'red'
+          //  color: 'red'
           //},
         },
         leaves: {
@@ -72,33 +84,58 @@ d3.csv("data.csv").then(links => {
             position: 'right',
             verticalAlign: 'middle',
             align: 'left',
-           // overflow: 'word' //break by word when the label exceed the width that is set
+            // overflow: 'word' //break by word when the label exceed the width that is set
           },
         },
         emphasis: {
           // blurScope: 'series',
-          focus: 'ancestor',
+          focus: 'ancestor', //Focus on all ancestor nodes. 
           label: {
-              color: '#682ed2',
-              fontWeight: 'bold'
+            color: '#682ed2',
+            fontWeight: 'bold'
           },
           lineStyle: {
-              color: '#682ed2'
+            color: '#682ed2'
           },
           itemStyle: {
-              borderColor: '#682ed2'
+            color: '#682ed2',
+            borderColor: '#682ed2'
           },
         },
-        blur: { //available when emphasis.focus is set
+        blur: { //available when emphasis.focus is set. détermine l'apparence des éléments non touchés par le focus
+
           label: {
-              opacity: 0.4
+            opacity: 0.4
           },
           lineStyle: {
-              opacity: 0.4
+            opacity: 0.4
           },
           itemStyle: {
-              opacity: 0.4,
+            opacity: 0.4,
           },
+        },
+        tooltip: {
+          position: [10, 10],
+          textStyle: {
+            width: 100, //marche pas
+            height: 700, //marche pas non plus
+            overflow: 'break', //ne marche que si width est utilisée
+          },
+          //formatter: 'Series name: {a} <br/> Data name: {b} <br/> Data value (if any):{c0}',
+          formatter: function (params, ticket, callback) {
+            //$.get('detail?name=' + params.name, function (content) {
+              //callback(ticket, "test");
+            //});
+            switch (params.data.data.data.type){
+              case  "titre":
+                return params.data.data.data.prix;
+              case "outil":
+                return '<a href="'+params.data.data.data.lien+'">test</a>';
+              case "pratique":
+                return params.data.data.data.description;
+            }
+            
+          }
         },
         expandAndCollapse: true,
         animationDuration: 550,
@@ -106,5 +143,6 @@ d3.csv("data.csv").then(links => {
       }
     ]
   };
+
+  option && myChart.setOption(option);
 });
-option && myChart.setOption(option);
