@@ -18,10 +18,15 @@ Le zoom sur mobile ne marche pas. J'ai testé avec l'extention live server et en
 - [Exemple  de boutons zoom et reset]()
 
 ## Les tooltips doivent avoir une largeur fixe
-Quand le texte dans le tooltip est long, le tooltip est très large aussi. J'ai essayé d'inclure une largeur fixe mais étrangement ça ne marche pas (ligne 129 dans le fichier tree.js).
+Quand le texte dans le tooltip est long, le tooltip est très large aussi. J'ai essayé d'inclure une largeur fixe et une gestion de l'overflow mais étrangement ça ne marche pas (ligne 129 dans le fichier tree.js).
 - [Documentation de texStyle width](https://echarts.apache.org/en/option.html#series-tree.tooltip.textStyle.width)
 
 ## Les tooltips débordent hors de l'écran
+Une idée serait de mettre le tooltip en haut à gauche de la carto par exemple. Je l'ai déja fait et ça marche. A voir si il existe un autre moyen.
+
+## Le tooltip ne reste pas assez longtemps pour que l'on puisse cliquer dessus
+J'ai essayé avec différentes approches dont actuellement alwaysShowContent sans succès. Sinon il y a hideDelay mais qui n'a pas marché aussi. Je pense que ce n'est peut être pas prévu pour ce type de diagramme peut être.
+- [Documentation alwaysShowContent](https://echarts.apache.org/en/option.html#tooltip.alwaysShowContent)
 
 ## Localisation de la librairie Echarts
 Actuellement la librairie Echarts se trouve dans le fichier Echarts.js, alors que d3 est appelée via un lien. Qu'est ce qui est le mieux dans ce genre de projet qu'on ordonne tout ça ?
