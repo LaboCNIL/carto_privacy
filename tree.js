@@ -123,7 +123,7 @@ d3.csv("data.csv").then(links => {
         tooltip: {
           trigger: 'item',
           padding: 15,
-          hideDelay: 500, //marche pas
+          alwaysShowContent: true, //marche pas
           //alwaysShowContent: 'true', //marche pas
           //position: [10, 10],
           textStyle: {
