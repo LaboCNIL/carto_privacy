@@ -137,3 +137,17 @@ aside {
     background-color: rgb(255, 225, 222);
     border-radius: 100px;
 }
+
+span + span {
+    white-space: wrap;
+    width: 200px;
+    margin-left: 2ch;
+    overflow-wrap: break-word;
+}
+
+.tooltip {
+    display: flex;
+    flex-wrap:  wrap;
+    width: 200px;
+    overflow-wrap: break-word;
+}

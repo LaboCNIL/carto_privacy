@@ -17,12 +17,12 @@ Voici une image montrant à quoi pourra ressembler la cartographie. Le design n'
 Le zoom sur mobile ne marche pas. J'ai testé avec l'extention live server et en entrant l'adresse ip du mac sur le navigateur de mon téléphone. J'ai vu cette démo (lien en dessous) de controleurs pour smartphone mais ça marchait moyen pour moi, et je ne suis pas sûr qu'on peut les integrer dans notre type de diagramme (j'ai éssayé mais je n'ai pas réussi).
 - [Exemple  de boutons zoom et reset]()
 
-## Les tooltips doivent avoir une largeur fixe
-Quand le texte dans le tooltip est long, le tooltip est très large aussi. J'ai essayé d'inclure une largeur fixe et une gestion de l'overflow mais étrangement ça ne marche pas (ligne 129 dans le fichier tree.js).
+## ~~Les tooltips doivent avoir une largeur fixe~~Résolu en stylisant avec le css le contenu du tooltip
+Quand le texte dans le tooltip est long, le tooltip est très large aussi. J'ai essayé d'inclure une largeur fixe et une gestion de l'overflow mais étrangement ça ne marche pas (ligne 129 dans le fichier tree.js). Pourtant quand je test d'autres propriétés de textStyle ça marche : par ex le texte en italique ou changer la taille de la police.
 - [Documentation de texStyle width](https://echarts.apache.org/en/option.html#series-tree.tooltip.textStyle.width)
 
 ## Les tooltips débordent hors de l'écran
-Une idée serait de mettre le tooltip en haut à gauche de la carto par exemple. Je l'ai déja fait et ça marche. A voir si il existe un autre moyen.
+Une idée serait de mettre le tooltip en haut à gauche de la carto par exemple. Je l'ai déja fait et ça marche. A voir si il existe un autre moyen, peut être en visant le contenu du tooltip grâce au css.
 
 ## Le tooltip ne reste pas assez longtemps pour que l'on puisse cliquer dessus
 J'ai essayé avec différentes approches dont actuellement alwaysShowContent sans succès. Sinon il y a hideDelay mais qui n'a pas marché aussi. Je pense que ce n'est peut être pas prévu pour ce type de diagramme peut être.

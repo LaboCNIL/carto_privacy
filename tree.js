@@ -29,6 +29,7 @@ d3.csv("data.csv").then(links => {
     .parentId(d =>
       d.parent
     )(links);
+    
   //.id(d => d.nom)
   //.parentId(d => d.parent);
   console.log(root);
@@ -126,7 +127,9 @@ d3.csv("data.csv").then(links => {
           alwaysShowContent: true, //marche pas
           //alwaysShowContent: 'true', //marche pas
           //position: [10, 10],
+          width: 100,
           textStyle: {
+            fontStyle: 'italic',
             width: 100, //marche pas
             height: 700, //marche pas non plus
             overflow: 'break', //ne marche que si width est utilisée
@@ -136,11 +139,19 @@ d3.csv("data.csv").then(links => {
             //$.get('detail?name=' + params.name, function (content) {
               //callback(ticket, "test");
             //});
-            switch (params.data.data.data.type){
+            const csvParent = params.data.data.data.parent;
+            const csvType = params.data.data.data.type;
+            const csvNom = params.data.data.data.nom;
+            const csvDescriptionFr = params.data.data.data.descriptionFr;
+            const csvLien = params.data.data.data.lien;
+            const csvPrix = params.data.data.data.prix;
+            const csvLicence= params.data.data.data.licence;
+
+            switch (csvType){
               case  "titre":
-                return params.data.data.data.description;
+                return csvDescriptionFr;
               case "outil":
-                return '<div><a class="tag" href="'+params.data.data.data.lien+'">Site web de '+params.data.data.data.nom+'</a><p>'+params.data.data.data.description+'</p></div>';
+                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvDescriptionFr+'</span><span>'+csvPrix+'</span><span>'+csvLicence+'</span></div>';
               case "pratique":
                 return params.data.data.data.description;
             }
