@@ -129,7 +129,6 @@ d3.csv("data.csv").then(links => {
           //position: [10, 10],
           width: 100,
           textStyle: {
-            fontStyle: 'italic',
             width: 100, //marche pas
             height: 700, //marche pas non plus
             overflow: 'break', //ne marche que si width est utilisée
@@ -149,11 +148,11 @@ d3.csv("data.csv").then(links => {
 
             switch (csvType){
               case  "titre":
-                return csvDescriptionFr;
+                return '<div class="tooltip">'+csvDescriptionFr+'</div>';
               case "outil":
-                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvDescriptionFr+'</span><span>'+csvPrix+'</span><span>'+csvLicence+'</span></div>';
+                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><div class="description-outil">'+csvDescriptionFr+'<div></div>';
               case "pratique":
-                return params.data.data.data.description;
+                return '<div class="tooltip>'+csvDescriptionFr+'</div>';
             }
             
           }
