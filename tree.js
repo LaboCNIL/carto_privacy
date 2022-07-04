@@ -141,16 +141,19 @@ d3.csv("data.csv").then(links => {
             const csvParent = params.data.data.data.parent;
             const csvType = params.data.data.data.type;
             const csvNom = params.data.data.data.nom;
-            const csvDescriptionFr = params.data.data.data.descriptionFr;
             const csvLien = params.data.data.data.lien;
+            const csvDescriptionFr = params.data.data.data.descriptionFr;
+            const csvSourceDescriptionFr = params.data.data.data.sourceDescriptionFr;
+            const csvLienDescriptionFr = params.data.data.data.lienDescriptionFr;
             const csvPrix = params.data.data.data.prix;
-            const csvLicence= params.data.data.data.licence;
+            const csvLicence = params.data.data.data.licence;
+            const csvPlateformes = params.data.data.data.plateformes;
 
             switch (csvType){
               case  "titre":
                 return '<div class="tooltip">'+csvDescriptionFr+'</div>';
               case "outil":
-                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><div class="description-outil">'+csvDescriptionFr+'<div></div>';
+                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><span>'+csvPlateformes+'</span><div class="description-outil">'+csvDescriptionFr+'<a href="'+ csvLienDescriptionFr+'">'+csvSourceDescriptionFr+'</a><div></div>';
               case "pratique":
                 return '<div class="tooltip>'+csvDescriptionFr+'</div>';
             }
