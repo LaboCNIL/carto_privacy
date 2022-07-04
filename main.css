@@ -133,21 +133,31 @@ aside {
 }
 
 .tag {
-    padding: 0.5em;
-    background-color: rgb(255, 225, 222);
-    border-radius: 100px;
+    color: #682ed2;
+    padding: 0.5em 1em;
+    background-color: #e4dffb;
+    border-radius: 5px;
 }
 
-span + span {
-    white-space: wrap;
-    width: 200px;
+span {
+    /* width: 200px; */
     margin-left: 2ch;
+    white-space: pre-wrap;
     overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+}
+
+.description-outil {
+    all: none;
+    margin-top: 1em;
 }
 
 .tooltip {
     display: flex;
     flex-wrap:  wrap;
-    width: 200px;
+    width: 400px;
+    white-space: pre-wrap;
     overflow-wrap: break-word;
 }
