@@ -21,7 +21,7 @@ Le zoom sur mobile ne marche pas. J'ai testé avec l'extention live server et en
 Quand le texte dans le tooltip est long, le tooltip est très large aussi. J'ai essayé d'inclure une largeur fixe et une gestion de l'overflow mais étrangement ça ne marche pas (ligne 129 dans le fichier tree.js). Pourtant quand je test d'autres propriétés de textStyle ça marche : par ex le texte en italique ou changer la taille de la police.
 - [Documentation de texStyle width](https://echarts.apache.org/en/option.html#series-tree.tooltip.textStyle.width)
 
-## Les tooltips débordent hors de l'écran
+## ~~Les tooltips débordent hors de l'écran~~ Résolu
 Une idée serait de mettre le tooltip en haut à gauche de la carto par exemple. Je l'ai déja fait et ça marche. A voir si il existe un autre moyen, peut être en visant le contenu du tooltip grâce au css.
 
 ## Le tooltip ne reste pas assez longtemps pour que l'on puisse cliquer dessus
