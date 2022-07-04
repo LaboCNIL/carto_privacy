@@ -134,6 +134,7 @@ aside {
 
 .tag {
     color: #682ed2;
+    margin: 0 2ch 2ch 0;
     padding: 0.5em 1em;
     background-color: #e4dffb;
     border-radius: 5px;
@@ -141,12 +142,17 @@ aside {
 
 span {
     /* width: 200px; */
-    margin-left: 2ch;
+    width: fit-content;
+    margin: 0 2ch 2ch 0;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     padding: 0.5em 1em;
     background-color: #e2e2e2;
     border-radius: 5px;
+}
+
+.tooltip:empty, .tag:empty, span:empty {
+    display:none;
 }
 
 .description-outil {
