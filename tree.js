@@ -61,9 +61,7 @@ d3.csv("data.csv").then(links => {
         bottom: '22%',
         right: '20%',
         symbolSize: 7,
-        //edgeShape: 'polyline',
-        // edgeForkPosition: '63%',
-        roam: true, //enable panning and zooming. Can be set to 'scale' or 'zoom' to enable only one
+        roam: true,
         initialTreeDepth: 1,
         lineStyle: {
           width: 1.5,
@@ -105,35 +103,30 @@ d3.csv("data.csv").then(links => {
             color: '#682ed2'
           },
           itemStyle: {
-            color: '#682ed2',
+            //color: '#682ed2',
             borderColor: '#682ed2'
           },
         },
         blur: { //available when emphasis.focus is set. détermine l'apparence des éléments non touchés par le focus
 
           label: {
-            opacity: 0.4
+            opacity: 0.3
           },
           lineStyle: {
-            opacity: 0.4
+            opacity: 0.3
           },
           itemStyle: {
-            opacity: 0.4,
+            opacity: 0.3,
           },
         },
-        tooltip: {
+        tooltip: { //le style du tooltip est géré dans le css
+          className: 'tooltip',
           trigger: 'item',
           padding: 15,
-          alwaysShowContent: true, //marche pas
-          //alwaysShowContent: 'true', //marche pas
-          //position: [10, 10],
+          hideDelay: 200,
+          enterable: true,
+          confine: true,
           width: 100,
-          textStyle: {
-            width: 100, //marche pas
-            height: 700, //marche pas non plus
-            overflow: 'break', //ne marche que si width est utilisée
-          },
-          //formatter: 'Series name: {a} <br/> Data name: {b} <br/> Data value (if any):{c0}',
           formatter: function (params, ticket, callback) {
             //$.get('detail?name=' + params.name, function (content) {
               //callback(ticket, "test");
@@ -148,14 +141,17 @@ d3.csv("data.csv").then(links => {
             const csvPrix = params.data.data.data.prix;
             const csvLicence = params.data.data.data.licence;
             const csvPlateformes = params.data.data.data.plateformes;
+            //formattage de la description des titres en liste à puce
+            const csvDescriptionFrTitre = csvDescriptionFr.replace(/, /g, '</br>• ').replace(/: /g, ':</br>• ');
 
             switch (csvType){
               case  "titre":
-                return '<div class="tooltip">'+csvDescriptionFr+'</div>';
+                return '<div class="tooltip-container">'+csvDescriptionFrTitre+'</div>';
+                //return '<div class="tooltip">'+csvDescriptionFrTitre+'</div>';
               case "outil":
-                return '<div class ="tooltip"><a class="tag" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><span>'+csvPlateformes+'</span><div class="description-outil">'+csvDescriptionFr+'<a href="'+ csvLienDescriptionFr+'">'+csvSourceDescriptionFr+'</a><div></div>';
+                return '<div class ="tooltip-container"><a class="lien-outil" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><span>'+csvPlateformes+'</span><div class="description-outil">'+csvDescriptionFr+'<a class="lien-description-outil" href="'+csvLienDescriptionFr+'">&nbsp;'+csvSourceDescriptionFr+'</a><div></div>';
               case "pratique":
-                return '<div class="tooltip>'+csvDescriptionFr+'</div>';
+                return '<div class="tooltip-container">'+csvDescriptionFr+'</div>';
             }
             
           }

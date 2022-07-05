@@ -73,7 +73,7 @@ header {
     }
 }
 
-/* Content
+/* Page content
   * ========================================================================== */
 
 .header_back_button {
@@ -132,18 +132,51 @@ aside {
     padding: 0.8rem 0.8rem;
 }
 
-.tag {
+/* Tooltip cartographie
+  * ========================================================================== */
+
+.tooltip-container {
+    display: flex;
+    flex-wrap:  wrap;
+    max-width: 400px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+div:has(.tooltip-container):empty {
+    display: none;
+}
+
+.tooltip-container:empty, .tag:empty, span:empty {
+    display:none;
+    visibility: hidden;
+}
+
+/* lien vers le site de l'outil */
+.lien-outil {
+    all: unset;
     color: #682ed2;
-    margin: 0 2ch 2ch 0;
+    margin: 0 1ch 1ch 0;
     padding: 0.5em 1em;
     background-color: #e4dffb;
     border-radius: 5px;
 }
 
+.lien-outil:hover, .lien-outil:active {
+    all: inherit;
+    color: #682ed2;
+    margin: 0 1ch 1ch 0;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: #cbbff7;
+    text-decoration: underline currentColor;
+}
+
+/* prix, license, plateformes etc */
 span {
     /* width: 200px; */
     width: fit-content;
-    margin: 0 2ch 2ch 0;
+    margin: 0 1ch 1ch 0;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     padding: 0.5em 1em;
@@ -151,19 +184,19 @@ span {
     border-radius: 5px;
 }
 
-.tooltip:empty, .tag:empty, span:empty {
-    display:none;
-}
-
+/* description de l'outil */
 .description-outil {
     all: none;
     margin-top: 1em;
 }
 
-.tooltip {
-    display: flex;
-    flex-wrap:  wrap;
-    width: 400px;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
+/* lien vers la source de la description de l'outil : Wikipedia etc */
+.tooltip-container .lien-description-outil {
+    color:#682ed2;
+}
+
+.tooltip-container .lien-description-outil:hover, .tooltip-container .lien-description-outil:active {
+    all: unset;
+    color:#682ed2;
+    text-decoration: underline currentColor;
 }
