@@ -3,6 +3,8 @@
 - ajouter des descriptions des fonctionnalités et caractéristiques pour les titres de second niveau
 - ajouter des descriptions succintes pour les titres de premier niveau (S'EQUIPER etc)
 - verifier les noms et descriptions des pratiques (certaines ont peut être été écrites un peu vite / n'ont pas de description ou de nom pertinent)
+- voir si les liens de "Comprendre le marché des données" marchent et si les services sont encore d'actualité. (les liens ne marchaient pas le 6 juillet)
+- répartir les solutions répertoriées dans la catégorie Autre
 - intégrer les propositions de [openlinc.md](openlinc.md) dans la carto
 - éventuellement au besoin effacer le fichier openlinc.md
 - éventuellement effacer le dossier tests
