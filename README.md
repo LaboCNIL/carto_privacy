@@ -2,7 +2,7 @@
 
 # Carto Privacy v2.0 by LINC
 
-[EN COURS] Le [Laboratoire d'Innovation Numérique de la CNIL (LINC)](https://linc.cnil.fr) publie la version 2.0 de sa [cartographie des outils et pratiques](#) respectueuses de la vie privée sous licence Creative Commons CC-BY.
+Le [Laboratoire d'Innovation Numérique de la CNIL (LINC)](https://linc.cnil.fr) publie la version 2.0 de sa [cartographie des outils et pratiques](#) respectueuses de la vie privée sous licence Creative Commons CC-BY.
 
 ## Sommaire
 - [Carto Privacy v2.0 by LINC](#carto-privacy-v20-by-linc)
@@ -72,14 +72,5 @@ Fichiers
 ## License
 
 Le projet est sous license.............
-
-## Auteurs et autrices
-
-Agents et agentes de la CNIL pendant l'Open LINC
-.......................................
-
-## Sources
-
-.......................................
 
 [Retour en haut](#carto-privacy-v20-by-linc)
