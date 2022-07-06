@@ -20,17 +20,17 @@
 ## La cartographie
 Le LINC a choisi de symboliser des usages par des verbes, découpés en actions et des sous-actions. Pour chacune des sous-actions, le LINC a repéré certaines caractéristiques et fonctionnalités spécifiques, protectrices de la vie privée (décrites dans les bulles infos). A titre d'exemple, la cartographie recense des services qui annoncent mettre en œuvre une ou plusieurs des caractéristiques présentées. Chacun de ces services est présenté par un court texte de description, tiré selon les cas du site du service ou de sa fiche Wikipedia.
 
-> ⚠️ La cartographie n'est pas exhaustive et les services cités ne font l'objet d'aucune labellisation par la CNIL, ils reflètent, au mieux, un état des lieux transitoire des propositions repérées par le LINC.
+⚠️ Cette cartographie n'a pas vocation à être exhaustive, les différents services cités ne font l'objet d'aucune labellisation par la CNIL, ils reflètent au mieux un état des lieux transitoire des propositions repérées par le LINC. ⚠️
 
 ## Développement
 
-La cartographie s'appuie sur une base de donnée au format csv, convertie ensuite en JSON avec la librairie D3.js puis mise en forme avec la librairie Apache Echarts. Ce format permet de la rendre collaborative : que vous soyez développeur·euse ou utilisateur·ice de services numériques, la cartographie a vocation à être enrichie, améliorée mais aussi copiée tant dans sa forme que dans son contenu. Les différentes manières de contribuer son listées dans la section [Contribuer](#contribuer). (actuellement dans [note.md](note.md)).
-
+La cartographie s'appuie sur une base de donnée au format csv, convertie ensuite en JSON avec la librairie D3.js puis mise en forme avec la librairie Apache Echarts. Ce format permet de la rendre collaborative : que vous soyez développeur·euse ou utilisateur·ice de services numériques, la cartographie a vocation à être enrichie, améliorée mais aussi copiée tant dans sa forme que dans son contenu. Les différentes manières de contribuer son listées dans la section [Contribuer](#contribuer) et les possibles objectifs de développement dans la [Roadmap](roadmap.md).
 Cette cartographie se veut être une des interface visuelle possible de la base de donnée csv, mais d'autres peuvent être conçues ou développées.
 
 ## Contribuer
+La [Roadmap](roadmap.md) vous aidera à cerner les besoins en terme de contributions.
 
-### Modifier la base de donnée
+### Modifier le contenu
 Ajouter ou en modifier une pratique ou un service dans [la base de donnée csv](data.csv) est simple et peut se faire directement sur la page GitHub de [data.csv](data.csv) (en cliquant sur l'icône de crayon à droite). Veillez à bien respecter le même format que le reste des données du fichier ainsi qu'à faire attention aux majuscules, accents et espaces.
 
 Petit guide pour le contenu :
@@ -41,7 +41,10 @@ Petit guide pour le contenu :
 - description : Courte explication tirée de Wikipedia, du site web de l'outil dans le cas échéant. Il peut aussi d'agir du site de la CNIL pour les pratiques.
 - prix : `Payant`, `Freemium` ou `Gratuit`.
 - license : `Propriétaire` ou `Libre`.
-- plateformes : dans l'ordre : `GNU/Linux`, `Windows`, `macOS`, `Android`, `iOS`, `iPadOS`.
+- plateformes : dans l'ordre : `GNU/Linux`, `Windows`, `macOS`, `Android`, `iOS`, `iPadOS`, `Navigateur`.
+
+### Modifier le code
+Toute participation est la bienvenue concernant l'amélioration de parties du code gérant la cartoraphie.
 
 ### Participer à la discussion
 Il est possible d'écrire des commentaires ou suggestions via l'onglet "Issue" afin de discuter d'une solution de la cartographie, d'une éventuelle adition ou des raisons d'une absence.
@@ -75,7 +78,7 @@ Le projet est sous license.............
 Agents et agentes de la CNIL pendant l'Open LINC
 .......................................
 
-## Sources ?
+## Sources
 
 .......................................
 

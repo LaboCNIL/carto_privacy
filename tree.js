@@ -149,9 +149,9 @@ d3.csv("data.csv").then(links => {
                 return '<div class="tooltip-container">'+csvDescriptionFrTitre+'</div>';
                 //return '<div class="tooltip">'+csvDescriptionFrTitre+'</div>';
               case "outil":
-                return '<div class ="tooltip-container"><a class="lien-outil" href="'+csvLien+'">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><span>'+csvPlateformes+'</span><div class="description-outil">'+csvDescriptionFr+'<a class="lien-description-outil" href="'+csvLienDescriptionFr+'">&nbsp;'+csvSourceDescriptionFr+'</a><div></div>';
+                return '<div class ="tooltip-container"><a class="lien-outil" href="'+csvLien+'" target="_blank" rel="noopener noreferrer nofollow">Site web de '+csvNom+'</a><span>'+csvPrix+'</span><span>'+csvLicence+'</span><span>'+csvPlateformes+'</span><div class="description-outil">'+csvDescriptionFr+'<a class="lien-description-outil" href="'+csvLienDescriptionFr+'" target="_blank" rel="noopener noreferrer nofollow">&nbsp;'+csvSourceDescriptionFr+'</a><div></div>';
               case "pratique":
-                return '<div class="tooltip-container">'+csvDescriptionFr+'</div>';
+                return '<div class="tooltip-container"><a class="lien-outil" href="'+csvLien+'" target="_blank" rel="noopener noreferrer nofollow">Site web de '+csvNom+'</a><div class="description-outil">'+csvDescriptionFr+'</div></div>';
             }
             
           }
